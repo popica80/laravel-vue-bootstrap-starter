@@ -30,7 +30,7 @@ export default {
         },
         submitLogin({commit, state})
         {
-            axios.post('login', {...state.form.field}).then(response => {
+            axios.post('login', {...state.form.fields}).then(response => {
                 commit('SET_USER', response.data)
                 router.push({name: 'home'})
             }).catch(error => {
@@ -69,6 +69,7 @@ export default {
         REMOVE_ERROR(state, name)
         {
             state.form.errors[name] = '';
+            state.form.errors['message'] = ''
         }
     },
 }
