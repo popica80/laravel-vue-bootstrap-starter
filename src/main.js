@@ -13,11 +13,11 @@ Vue.config.productionTip = false
 axios.defaults.baseURL = 'http://api.test/api/v1/'
 
 router.beforeEach((to, from, next) => {
-  let api_token = localStorage.getItem('api_token')
+  let api_token = localStorage.getItem('token')
   if(api_token) {    
     axios.defaults.headers.common['Authorization'] = 'Bearer ' + api_token    
     axios.get('user?api_token=' + api_token).then(response => {
-      store.commit('auth/SET_USER', response.data)
+      store.commit('auth/SET_AUTH', response.data)
     })
   }
   next()

@@ -1,7 +1,7 @@
 <template>
         <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
       <div class="container">
-        <a class="navbar-brand" href="#">Vue</a>
+        <router-link :to="{name: 'home'}" class="navbar-brand" href="#">Starter</router-link>
         <button
           class="navbar-toggler"
           type="button"
