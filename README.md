@@ -1,19 +1,25 @@
-# vue-bootstrap-starter
+# Laravel Vue Bootstrap starter
+> starter project using Laravel as backend API, VueJs with Router, Store, and Bootstrap for styling
 
-## Project setup
+## Laravel Setup
 ```
+cd api
+composer install
+cp .env.example .env
+php artisan key:generate
 npm install
 ```
-
-### Compiles and hot-reloads for development
+Edit the .env file with the required data (APP_URL, DB_*...), create the database then
 ```
+php artisan migrate
+```
+## Vue Setup
+in the root directory
+```
+npm install
 npm run serve
 ```
+Go to http://localhost:8080 and see your default starter page
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
